@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { isMobileOnly } from 'react-device-detect';
 
 const Styles = styled.div`
   .home-content {
@@ -11,11 +12,13 @@ const Styles = styled.div`
     justify-content: center;
     align-items: center;
     font-family: 'Luckiest Guy', cursive;
+    white-space: ${isMobileOnly ? 'pre-line' : ''};
+    text-align: center;
   }
 
   h1 {
     margin: 0;
-    font-size: 10vw;
+    font-size: ${isMobileOnly ? '14vw' : '10vw'};
     padding: 0;
     color: #04fafa;
     text-shadow: 0 0.1em 20px rgba(0, 0, 0, 1), 0.05em -0.03em 0 rgba(0, 0, 0, 1),
@@ -67,7 +70,7 @@ export const Home = (props) => {
     <Styles>
       <div className='home-content'>
         <h1>
-          <span>NICK</span> <span>VAN</span> <span>DE</span> <span>VELDEN</span>
+          <span>NICK</span> {'\n'} <span>VAN</span> <span>DE</span> <span>VELDEN</span>
         </h1>
       </div>
     </Styles>
