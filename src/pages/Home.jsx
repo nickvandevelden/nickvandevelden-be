@@ -8,59 +8,91 @@ const Styles = styled.div`
     position: relative;
     width: 100vw;
     display: flex;
-    background-color: #fcba03;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Luckiest Guy', cursive;
-    white-space: ${isMobileOnly ? 'pre-line' : ''};
     text-align: center;
+    background-color: #222;
+    font-family: 'Montserrat', sans-serif;
+    white-space: ${isMobileOnly ? 'pre-line' : ''};
+  }
+  .swipe {
+    position: relative;
+    width: 100vw;
+    &::after {
+      display: inline-block;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 100%;
+      width: 0%;
+      height: 100%;
+      background-color: #facc00;
+      animation: swipe 1.5s ease-out 1s forwards;
+    }
+    &--delay {
+      &::after {
+        background-color: #fff;
+        animation-delay: 1.5s;
+      }
+    }
   }
 
   h1 {
-    margin: 0;
-    font-size: ${isMobileOnly ? '14vw' : '10vw'};
-    padding: 0;
-    color: #04fafa;
-    text-shadow: 0 0.1em 20px rgba(0, 0, 0, 1), 0.05em -0.03em 0 rgba(0, 0, 0, 1),
-      0.05em 0.005em 0 rgba(0, 0, 0, 1), 0em 0.08em 0 rgba(0, 0, 0, 1),
-      0.05em 0.08em 0 rgba(0, 0, 0, 1), 0px -0.03em 0 rgba(0, 0, 0, 1),
-      -0.03em -0.03em 0 rgba(0, 0, 0, 1), -0.03em 0.08em 0 rgba(0, 0, 0, 1),
-      -0.03em 0 0 rgba(0, 0, 0, 1);
-    span {
-      transform: scale(0.9);
-      display: inline-block;
-    }
-    span:nth-child(1) {
-      animation: bop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite alternate;
-    }
-    span:nth-child(2) {
-      animation: bopB 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite alternate;
-    }
-    span:nth-child(3) {
-      animation: bopB 1s 0.3s cubic-bezier(0.2, 0.9, 0.32, 1.275) forwards infinite alternate;
-    }
-    span:nth-child(4) {
-      animation: bopB 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite alternate;
+    display: block;
+    color: #fff;
+    font-size: ${isMobileOnly ? '9vw' : '8vw'};
+    line-height: 1;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 15px 25px;
+    opacity: 0;
+    animation: fade 0.01s ease-out 1.75s forwards;
+  }
+
+  h3 {
+    display: block;
+    color: #fff;
+    font-size: ${isMobileOnly ? '4.5vw' : '3vw'};
+    line-height: 1;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    opacity: 0;
+    animation: fade 0.01s ease-out 2.25s forwards;
+  }
+
+  @media (orientation: landscape) {
+    h1 {
+      font-size: 8vw;
     }
   }
 
-  @keyframes bop {
-    0% {
-      transform: scale(0.9);
+  @keyframes fade {
+    from {
+      opacity: 0;
     }
-    50%,
-    100% {
-      transform: scale(1);
+    to {
+      opacity: 1;
     }
   }
 
-  @keyframes bopB {
+  @keyframes swipe {
     0% {
-      transform: scale(0.9);
+      right: 100%;
+      left: 0;
+      width: 0%;
     }
-    80%,
+    50% {
+      right: 0;
+      left: 0;
+      width: 100%;
+    }
     100% {
-      transform: scale(1) rotateZ(-3deg);
+      right: 0;
+      left: 100%;
+      width: 0%;
     }
   }
 `;
@@ -69,9 +101,12 @@ export const Home = (props) => {
   return (
     <Styles>
       <div className='home-content'>
-        <h1>
-          <span>NICK</span> {'\n'} <span>VAN</span> <span>DE</span> <span>VELDEN</span>
-        </h1>
+        <div className='swipe'>
+          <h1>Nick {'\n'} Van de Velden</h1>
+        </div>
+        <div className='swipe swipe--delay'>
+          <h3>Senior Test Engineer</h3>
+        </div>
       </div>
     </Styles>
   );
