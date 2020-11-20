@@ -16,25 +16,31 @@ const Styles = styled.div`
     overflow: hidden;
   }
 
+  .description {
+    font-size: ${isMobileOnly ? '4vw' : '2vw'};
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7vh;
+  }
+
   .adjectives {
     position: relative;
     width: 100%;
   }
 
-  .description {
-    font-size: ${isMobileOnly ? '4vw' : '2vw'};
-  }
-
   .adjective {
     font-size: ${isMobileOnly ? '9vw' : '7vw'};
-    left: 0;
-    margin-bottom: 30px;
-    opacity: 0;
     position: absolute;
+    left: 0;
     right: 0;
+    margin: auto;
+    width: 100vw;
+    opacity: 0;
     text-align: center;
     text-transform: uppercase;
-    top: 0;
   }
 
   @media (orientation: landscape) {
@@ -140,8 +146,8 @@ export const About = (props) => {
   return (
     <Styles>
       <div className='about-content'>
+        <div className='description'>Get in touch with me for...</div>
         <div className='adjectives'>
-          <p className='description'>Get in touch with me for...</p>
           <h2 className='adjective testing'>Testing</h2>
           <h2 className='adjective test-automation'>Test Automation</h2>
           <h2 className='adjective product-management'>Product Management</h2>
