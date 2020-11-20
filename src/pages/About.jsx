@@ -17,13 +17,13 @@ const Styles = styled.div`
   }
 
   .description {
-    font-size: ${isMobileOnly ? '4vw' : '2vw'};
+    font-size: ${isMobileOnly ? '4.5vw' : '3vw'};
     position: absolute;
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 7vh;
+    margin-bottom: 8vh;
   }
 
   .adjectives {
@@ -45,7 +45,7 @@ const Styles = styled.div`
 
   @media (orientation: landscape) {
     .description {
-      font-size: 2vw;
+      font-size: 3vw;
     }
 
     .adjective {
