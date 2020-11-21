@@ -12,133 +12,164 @@ const Styles = styled.div`
     align-items: center;
     text-align: center;
     background-color: #fff;
-    font-family: 'Montserrat', sans-serif;
     overflow: hidden;
   }
 
+  h1 {
+    font-size: 32px/34px;
+  }
+
+  h5 {
+    font-size: 22px/24px;
+  }
+
+  .sentence {
+    font-size: ${isMobileOnly ? '6vw' : '4vw'};
+    width: 100%;
+  }
+
   .description {
-    font-size: ${isMobileOnly ? '5vw' : '30px'};
-    width: 100vw;
-    margin-bottom: ${isMobileOnly ? '10vh' : '25vh'};
-
-    @media only screen and (max-width: 1200px) {
-      font-size: ${isMobileOnly ? '5vw' : '2.5vw'};
-    }
+    font-size: ${isMobileOnly ? '4vw' : '3vw'};
+    font-weight: 100;
   }
 
-  .adjectives {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  .words {
+    display: block;
+    position: relative;
+    margin: 20px auto;
   }
 
-  .adjective {
-    font-size: ${isMobileOnly ? '7vw' : '90px'};
+  .words-1 span {
     position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 100vw;
+    width: 100%;
+    margin-left: -50%;
     opacity: 0;
-    text-align: center;
-    text-transform: uppercase;
-
-    @media only screen and (max-width: 1200px) {
-      font-size: 7vw;
-    }
+    overflow: hidden;
+    -webkit-animation: rotateWord 10s linear infinite 0s;
+    -ms-animation: rotateWord 10s linear infinite 0s;
+    animation: rotateWord 10s linear infinite 0s;
   }
 
-  @media (orientation: landscape) {
-    .description {
-      font-size: 2.5vw;
-    }
+  .words-1 span:nth-child(2) {
+    -webkit-animation-delay: 2.5s;
+    -ms-animation-delay: 2.5s;
+    animation-delay: 2.5s;
   }
 
-  .testing {
-    animation: rotate-text-up1 10s infinite;
+  .words-1 span:nth-child(3) {
+    -webkit-animation-delay: 5s;
+    -ms-animation-delay: 5s;
+    animation-delay: 5s;
   }
 
-  .test-automation {
-    animation: rotate-text-up2 10s infinite;
+  .words-1 span:nth-child(4) {
+    -webkit-animation-delay: 7.5s;
+    -ms-animation-delay: 7.5s;
+    animation-delay: 7.5s;
   }
 
-  .product-management {
-    animation: rotate-text-up3 10s infinite;
-  }
-
-  .web-development {
-    animation: rotate-text-up4 10s infinite;
-  }
-
-  @keyframes rotate-text-up1 {
+  @-webkit-keyframes rotateWord {
     0% {
-      transform: translate3d(0, 80px, 0);
       opacity: 0;
     }
 
-    4%,
-    21% {
-      transform: translate3d(0, 0, 0);
+    2% {
+      opacity: 0;
+      -webkit-transform: translateY(-30px);
+    }
+
+    5% {
       opacity: 1;
+      -webkit-transform: translateY(0px);
     }
 
-    25% {
-      transform: translate3d(0, -40px, 0);
-      opacity: 0;
-    }
-  }
-
-  @keyframes rotate-text-up2 {
-    25% {
-      transform: translate3d(0, 80px, 0);
-      opacity: 0;
-    }
-
-    29%,
-    46% {
-      transform: translate3d(0, 0, 0);
+    17% {
       opacity: 1;
+      -webkit-transform: translateY(0px);
     }
 
-    50% {
-      transform: translate3d(0, -40px, 0);
+    20% {
       opacity: 0;
+      -webkit-transform: translateY(30px);
     }
-  }
 
-  @keyframes rotate-text-up3 {
-    50% {
-      transform: translate3d(0, 80px, 0);
+    80% {
       opacity: 0;
-    }
-
-    54%,
-    71% {
-      transform: translate3d(0, 0, 0);
-      opacity: 1;
-    }
-
-    75% {
-      transform: translate3d(0, -40px, 0);
-      opacity: 0;
-    }
-  }
-
-  @keyframes rotate-text-up4 {
-    75% {
-      transform: translate3d(0, 80px, 0);
-      opacity: 0;
-    }
-
-    79%,
-    96% {
-      transform: translate3d(0, 0, 0);
-      opacity: 1;
     }
 
     100% {
-      transform: translate3d(0, -40px, 0);
+      opacity: 0;
+    }
+  }
+
+  @-ms-keyframes rotateWord {
+    0% {
+      opacity: 0;
+    }
+
+    2% {
+      opacity: 0;
+      -ms-transform: translateY(-30px);
+    }
+
+    5% {
+      opacity: 1;
+      -ms-transform: translateY(0px);
+    }
+
+    17% {
+      opacity: 1;
+      -ms-transform: translateY(0px);
+    }
+
+    20% {
+      opacity: 0;
+      -ms-transform: translateY(30px);
+    }
+
+    80% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes rotateWord {
+    0% {
+      opacity: 0;
+    }
+
+    2% {
+      opacity: 0;
+      -webkit-transform: translateY(-30px);
+      transform: translateY(-30px);
+    }
+
+    5% {
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+      transform: translateY(0px);
+    }
+
+    17% {
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+      transform: translateY(0px);
+    }
+
+    20% {
+      opacity: 0;
+      -webkit-transform: translateY(30px);
+      transform: translateY(30px);
+    }
+
+    80% {
+      opacity: 0;
+    }
+
+    100% {
       opacity: 0;
     }
   }
@@ -148,13 +179,15 @@ export const About = (props) => {
   return (
     <Styles>
       <div className='about-content'>
-        <div className='description'>Get in touch with me for...</div>
-        <div className='adjectives'>
-          <h2 className='adjective testing'>Testing</h2>
-          <h2 className='adjective test-automation'>Test Automation</h2>
-          <h2 className='adjective product-management'>Product Management</h2>
-          <h2 className='adjective web-development'>Web Development</h2>
-        </div>
+        <h2 class='sentence'>
+          <div className='description'>Get in touch with me for...</div>
+          <div class='words words-1'>
+            <span>TESTING</span>
+            <span>TEST AUTOMATION</span>
+            <span>PRODUCT MANAGEMENT</span>
+            <span>WEB DEVELOPMENT</span>
+          </div>
+        </h2>
       </div>
     </Styles>
   );
