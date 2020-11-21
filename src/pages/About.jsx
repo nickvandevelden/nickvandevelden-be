@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { isMobileOnly } from 'react-device-detect';
+import { isMobileOnly, isTablet } from 'react-device-detect';
+import { withOrientationChange } from 'react-device-detect';
 
 const Styles = styled.div`
   .about-content {
@@ -12,14 +13,13 @@ const Styles = styled.div`
     align-items: center;
     text-align: center;
     background-color: #fff;
-    font-family: 'Montserrat', sans-serif;
     overflow: hidden;
   }
 
   .description {
     font-size: ${isMobileOnly ? '5vw' : '30px'};
     width: 100vw;
-    margin-bottom: ${isMobileOnly ? '10vh' : '25vh'};
+    margin-bottom: ${isMobileOnly ? '125px' : '175px;'};
 
     @media only screen and (max-width: 1200px) {
       font-size: ${isMobileOnly ? '5vw' : '2.5vw'};
@@ -144,11 +144,18 @@ const Styles = styled.div`
   }
 `;
 
-export const About = (props) => {
+let About = (props) => {
+  const { isPortrait } = props;
+
   return (
     <Styles>
       <div className='about-content'>
-        <div className='description'>Get in touch with me for...</div>
+        <div
+          className='description'
+          style={{ marginBottom: isPortrait && isTablet ? '175px' : '' }}
+        >
+          Get in touch with me for...
+        </div>
         <div className='adjectives'>
           <h2 className='adjective testing'>Testing</h2>
           <h2 className='adjective test-automation'>Test Automation</h2>
@@ -159,3 +166,7 @@ export const About = (props) => {
     </Styles>
   );
 };
+
+About = withOrientationChange(About);
+
+export { About };

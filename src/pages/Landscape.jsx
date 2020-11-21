@@ -11,7 +11,6 @@ const Styles = styled.div`
     align-items: center;
     text-align: center;
     background-color: #222;
-    font-family: 'Montserrat', sans-serif;
   }
 
   h1 {
