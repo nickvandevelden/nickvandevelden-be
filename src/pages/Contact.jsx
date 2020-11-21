@@ -33,8 +33,8 @@ const Styles = styled.div`
   .icon {
     margin-left: ${isMobileOnly ? '' : '4vw'};
     margin-right: ${isMobileOnly ? '' : '4vw'};
-    margin-top: ${isMobileOnly ? '2.5vh' : ''};
-    margin-bottom: ${isMobileOnly ? '2.5vh' : ''};
+    margin-top: ${isMobileOnly ? '3vh' : ''};
+    margin-bottom: ${isMobileOnly ? '3vh' : ''};
   }
 
   a {
