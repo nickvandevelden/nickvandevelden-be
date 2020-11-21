@@ -29,7 +29,7 @@ const Styles = styled.div`
   }
 
   .description {
-    font-size: ${isMobileOnly ? '4vw' : '3vw'};
+    font-size: ${isMobileOnly ? '5vw' : '3vw'};
     font-weight: 100;
   }
 
