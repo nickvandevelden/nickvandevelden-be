@@ -17,7 +17,7 @@ const Styles = styled.div`
   }
 
   .description {
-    font-size: ${isMobileOnly ? '5vw' : '2.5vw'};
+    font-size: ${isMobileOnly ? '5vw' : '30px'};
     position: absolute;
     left: 0;
     right: 0;
@@ -34,7 +34,7 @@ const Styles = styled.div`
   }
 
   .adjective {
-    font-size: 7vw;
+    font-size: ${isMobileOnly ? '7vw' : '90px'};
     position: absolute;
     left: 0;
     right: 0;
