@@ -17,7 +17,7 @@ const Styles = styled.div`
   }
 
   .description {
-    font-size: ${isMobileOnly ? '4vw' : '2.5vw'};
+    font-size: ${isMobileOnly ? '5vw' : '2.5vw'};
     position: absolute;
     left: 0;
     right: 0;
