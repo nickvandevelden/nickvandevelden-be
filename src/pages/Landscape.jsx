@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { COLORS } from './../constants/Colors';
 
 const Styles = styled.div`
   .landscape-content {
@@ -10,12 +11,12 @@ const Styles = styled.div`
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #222;
+    background-color: ${COLORS.primary};
   }
 
   h1 {
     display: block;
-    color: #fff;
+    color: ${COLORS.tertiary};
     font-size: 9vh;
     line-height: 1;
     font-weight: 900;

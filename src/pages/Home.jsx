@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { isMobileOnly } from 'react-device-detect';
+import { COLORS } from './../constants/Colors';
 
 const Styles = styled.div`
   .home-content {
@@ -12,7 +13,7 @@ const Styles = styled.div`
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #222;
+    background-color: ${COLORS.primary};
     white-space: ${isMobileOnly ? 'pre-line' : ''};
   }
   .swipe {
@@ -27,12 +28,12 @@ const Styles = styled.div`
       right: 100%;
       width: 0%;
       height: 100%;
-      background-color: #facc00;
+      background-color: ${COLORS.secondary};
       animation: swipe 1.5s ease-out 1s forwards;
     }
     &--delay {
       &::after {
-        background-color: #fff;
+        background-color: ${COLORS.tertiary};
         animation-delay: 1.5s;
       }
     }
@@ -40,7 +41,7 @@ const Styles = styled.div`
 
   h1 {
     display: block;
-    color: #fff;
+    color: ${COLORS.tertiary};
     font-size: ${isMobileOnly ? '9vw' : '8vw'};
     line-height: 1;
     font-weight: 900;
@@ -52,7 +53,7 @@ const Styles = styled.div`
 
   h3 {
     display: block;
-    color: #fff;
+    color: ${COLORS.tertiary};
     font-size: ${isMobileOnly ? '4.5vw' : '3vw'};
     line-height: 1;
     font-weight: 900;

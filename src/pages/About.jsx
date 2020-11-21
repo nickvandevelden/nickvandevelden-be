@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { isMobileOnly } from 'react-device-detect';
+import { COLORS } from './../constants/Colors';
 
 const Styles = styled.div`
   .about-content {
@@ -11,7 +12,7 @@ const Styles = styled.div`
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #fff;
+    background-color: ${COLORS.tertiary};
     overflow: hidden;
   }
 
