@@ -28,7 +28,7 @@ const Styles = styled.div`
       right: 100%;
       width: 0%;
       height: 100%;
-      background-color: ${COLORS.secondary};
+      background-color: ${COLORS.quaternary};
       animation: swipe 1.5s ease-out 1s forwards;
     }
     &--delay {
