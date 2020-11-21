@@ -18,12 +18,12 @@ const Styles = styled.div`
 
   .description {
     font-size: ${isMobileOnly ? '5vw' : '30px'};
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100vw;
     margin-bottom: ${isMobileOnly ? '10vh' : '25vh'};
+
+    @media only screen and (max-width: 1200px) {
+      font-size: ${isMobileOnly ? '5vw' : '2.5vw'};
+    }
   }
 
   .adjectives {
@@ -43,6 +43,10 @@ const Styles = styled.div`
     opacity: 0;
     text-align: center;
     text-transform: uppercase;
+
+    @media only screen and (max-width: 1200px) {
+      font-size: 7vw;
+    }
   }
 
   @media (orientation: landscape) {
