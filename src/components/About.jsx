@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { isMobileOnly } from 'react-device-detect';
-import { COLORS } from './../constants/Colors';
+import { COLORS } from '../constants/Colors';
 
 const Styles = styled.div`
   .about-content {
@@ -16,21 +16,13 @@ const Styles = styled.div`
     overflow: hidden;
   }
 
-  h1 {
-    font-size: 32px/34px;
-  }
-
-  h5 {
-    font-size: 22px/24px;
-  }
-
   .sentence {
     font-size: ${isMobileOnly ? '7vw' : '4vw'};
     width: 100%;
   }
 
   .description {
-    font-size: ${isMobileOnly ? '5vw' : '3vw'};
+    font-size: ${isMobileOnly ? '5vw' : '2.5vw'};
     font-weight: 100;
   }
 
@@ -71,106 +63,48 @@ const Styles = styled.div`
 
   @-webkit-keyframes rotateWord {
     0% {
+      transform: translate3d(0, 30px, 0);
       opacity: 0;
     }
-
-    2% {
-      opacity: 0;
-      -webkit-transform: translateY(-30px);
-    }
-
-    5% {
+    4%,
+    21% {
+      transform: translate3d(0, 0, 0);
       opacity: 1;
-      -webkit-transform: translateY(0px);
     }
-
-    17% {
-      opacity: 1;
-      -webkit-transform: translateY(0px);
-    }
-
-    20% {
-      opacity: 0;
-      -webkit-transform: translateY(30px);
-    }
-
-    80% {
-      opacity: 0;
-    }
-
-    100% {
+    25% {
+      transform: translate3d(0, -20px, 0);
       opacity: 0;
     }
   }
 
   @-ms-keyframes rotateWord {
     0% {
+      transform: translate3d(0, 30px, 0);
       opacity: 0;
     }
-
-    2% {
-      opacity: 0;
-      -ms-transform: translateY(-30px);
-    }
-
-    5% {
+    4%,
+    21% {
+      transform: translate3d(0, 0, 0);
       opacity: 1;
-      -ms-transform: translateY(0px);
     }
-
-    17% {
-      opacity: 1;
-      -ms-transform: translateY(0px);
-    }
-
-    20% {
-      opacity: 0;
-      -ms-transform: translateY(30px);
-    }
-
-    80% {
-      opacity: 0;
-    }
-
-    100% {
+    25% {
+      transform: translate3d(0, -20px, 0);
       opacity: 0;
     }
   }
 
   @keyframes rotateWord {
     0% {
+      transform: translate3d(0, 30px, 0);
       opacity: 0;
     }
-
-    2% {
-      opacity: 0;
-      -webkit-transform: translateY(-30px);
-      transform: translateY(-30px);
-    }
-
-    5% {
+    4%,
+    21% {
+      transform: translate3d(0, 0, 0);
       opacity: 1;
-      -webkit-transform: translateY(0px);
-      transform: translateY(0px);
     }
-
-    17% {
-      opacity: 1;
-      -webkit-transform: translateY(0px);
-      transform: translateY(0px);
-    }
-
-    20% {
-      opacity: 0;
-      -webkit-transform: translateY(30px);
-      transform: translateY(30px);
-    }
-
-    80% {
-      opacity: 0;
-    }
-
-    100% {
+    25% {
+      transform: translate3d(0, -20px, 0);
       opacity: 0;
     }
   }

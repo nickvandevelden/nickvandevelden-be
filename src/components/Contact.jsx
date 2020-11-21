@@ -7,7 +7,7 @@ import {
 } from 'react-icons/gr';
 import { BsEnvelope as EmailIcon } from 'react-icons/bs';
 import { isMobileOnly } from 'react-device-detect';
-import { COLORS } from './../constants/Colors';
+import { COLORS } from '../constants/Colors';
 import Bounce from 'react-reveal/Bounce';
 
 const Styles = styled.div`
@@ -41,10 +41,10 @@ const Styles = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    color: ${COLORS.text};
+    color: ${COLORS.tertiary};
     transition: 0.3s;
     &:hover {
-      color: ${COLORS.tertiary};
+      color: ${isMobileOnly ? COLORS.tertiary : COLORS.text};
     }
   }
 `;
