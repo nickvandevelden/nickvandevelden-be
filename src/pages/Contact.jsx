@@ -8,6 +8,7 @@ import {
 import { BsEnvelope as EmailIcon } from 'react-icons/bs';
 import { isMobileOnly } from 'react-device-detect';
 import { COLORS } from './../constants/Colors';
+import Bounce from 'react-reveal/Bounce';
 
 const Styles = styled.div`
   .contact-content {
@@ -54,24 +55,36 @@ export const Contact = (props) => {
       <div className='contact-content'>
         <div className='icons'>
           <div className='icon facebook'>
-            <a href='https://www.facebook.com/nick.vandevelden.3/' target='_blank' rel='noreferrer'>
-              <FacebookIcon />
-            </a>
+            <Bounce bottom>
+              <a
+                href='https://www.facebook.com/nick.vandevelden.3/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <FacebookIcon />
+              </a>
+            </Bounce>
           </div>
           <div className='icon instagram'>
-            <a href='https://www.instagram.com/nickvandevelden/' target='_blank' rel='noreferrer'>
-              <InstagramIcon />
-            </a>
+            <Bounce bottom>
+              <a href='https://www.instagram.com/nickvandevelden/' target='_blank' rel='noreferrer'>
+                <InstagramIcon />
+              </a>
+            </Bounce>
           </div>
           <div className='icon github'>
-            <a href='https://github.com/nickvandevelden/' target='_blank' rel='noreferrer'>
-              <GithubIcon />
-            </a>
+            <Bounce bottom>
+              <a href='https://github.com/nickvandevelden/' target='_blank' rel='noreferrer'>
+                <GithubIcon />
+              </a>
+            </Bounce>
           </div>
           <div className='icon email'>
-            <a href='mailto: nickvandevelden@hotmail.com'>
-              <EmailIcon />
-            </a>
+            <Bounce bottom>
+              <a href='mailto: nickvandevelden@hotmail.com'>
+                <EmailIcon />
+              </a>
+            </Bounce>
           </div>
         </div>
       </div>
