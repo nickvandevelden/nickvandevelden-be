@@ -25,7 +25,7 @@ const Styles = styled.div`
   }
 
   .sentence {
-    font-size: ${isMobileOnly ? '6vw' : '4vw'};
+    font-size: ${isMobileOnly ? '7vw' : '4vw'};
     width: 100%;
   }
 
