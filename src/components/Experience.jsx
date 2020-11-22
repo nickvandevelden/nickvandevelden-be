@@ -54,7 +54,7 @@ const Styles = styled.div`
   }
 
   img {
-    width: ${isMobileOnly ? '65%' : '50%'};
+    width: 50%;
   }
 
   .mediahuis img {
