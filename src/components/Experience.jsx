@@ -37,7 +37,7 @@ const Styles = styled.div`
   }
 
   .experience-row:nth-child(2) {
-    padding-bottom: ${isMobileOnly ? '10%' : '0%'};
+    padding-bottom: ${isMobileOnly ? '12.5%' : '0%'};
   }
 
   .experience-row:nth-child(3) {
