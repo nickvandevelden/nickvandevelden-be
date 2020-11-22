@@ -32,14 +32,16 @@ const Styles = styled.div`
   }
 
   .experience-row:nth-child(1) {
+    padding-top: ${isMobileOnly ? '5%' : '0%'};
     padding-bottom: ${isMobileOnly ? '15%' : '2.5%'};
   }
 
   .experience-row:nth-child(2) {
-    padding-bottom: ${isMobileOnly ? '15%' : '0%'};
+    padding-bottom: ${isMobileOnly ? '10%' : '0%'};
   }
 
   .experience-row:nth-child(3) {
+    padding-bottom: 5%;
   }
 
   .experience-column {
@@ -114,36 +116,24 @@ export const Experience = (props) => {
           <div className='experience-table'>
             <div class='experience-row'>
               <div class='experience-column'>
-                <Bounce bottom>
-                  <img src={SamsungImage} alt='samsung' />
-                </Bounce>
+                <img src={SamsungImage} alt='samsung' />
               </div>
               <div class='experience-column'>
-                <Bounce bottom>
-                  <img src={CrelanImage} alt='crelan' />
-                </Bounce>
+                <img src={CrelanImage} alt='crelan' />
               </div>
               <div class='experience-column'>
-                <Bounce bottom>
-                  <img src={CtgImage} alt='ctg' />
-                </Bounce>
+                <img src={CtgImage} alt='ctg' />
               </div>
             </div>
             <div class='experience-row'>
               <div class='experience-column'>
-                <Bounce bottom>
-                  <img src={BelfiusImage} alt='belfius' />
-                </Bounce>
+                <img src={BelfiusImage} alt='belfius' />
               </div>
               <div class='experience-column'>
-                <Bounce bottom>
-                  <img src={ArhsImage} alt='arhs' />
-                </Bounce>
+                <img src={ArhsImage} alt='arhs' />
               </div>
               <div class='experience-column'>
-                <Bounce bottom>
-                  <img src={MediahuisImage} alt='mediahuis' />
-                </Bounce>
+                <img src={MediahuisImage} alt='mediahuis' />
               </div>
             </div>
           </div>

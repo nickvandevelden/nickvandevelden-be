@@ -42,6 +42,7 @@ const Styles = styled.div`
     transition: 0.5s;
     &:hover {
       color: ${isMobileOnly ? COLORS.tertiary : COLORS.text};
+      font-size: ${isMobileOnly ? '10vw' : '7vw'};
     }
   }
 
@@ -51,40 +52,79 @@ const Styles = styled.div`
 `;
 
 export const Contact = (props) => {
-  return (
-    <Styles>
-      <div className='contact-content'>
-        <div className='icons'>
-          <div className='icon facebook'>
-            <a href='https://www.facebook.com/nick.vandevelden.3/' target='_blank' rel='noreferrer'>
-              <Bounce bottom>
-                <FacebookIcon />
-              </Bounce>
-            </a>
-          </div>
-          <div className='icon instagram'>
-            <a href='https://www.instagram.com/nickvandevelden/' target='_blank' rel='noreferrer'>
-              <Bounce bottom>
-                <InstagramIcon />
-              </Bounce>
-            </a>
-          </div>
-          <div className='icon github'>
-            <a href='https://github.com/nickvandevelden/' target='_blank' rel='noreferrer'>
-              <Bounce bottom>
-                <GithubIcon />
-              </Bounce>
-            </a>
-          </div>
-          <div className='icon email'>
-            <a href='mailto: nickvandevelden@hotmail.com'>
-              <Bounce bottom>
-                <EmailIcon />
-              </Bounce>
-            </a>
+  if (isMobileOnly) {
+    return (
+      <Styles>
+        <div className='contact-content'>
+          <div className='icons'>
+            <div className='icon facebook'>
+              <a
+                href='https://www.facebook.com/nick.vandevelden.3/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <Bounce bottom>
+                  <FacebookIcon />
+                </Bounce>
+              </a>
+            </div>
+            <div className='icon instagram'>
+              <a href='https://www.instagram.com/nickvandevelden/' target='_blank' rel='noreferrer'>
+                <Bounce bottom>
+                  <InstagramIcon />
+                </Bounce>
+              </a>
+            </div>
+            <div className='icon github'>
+              <a href='https://github.com/nickvandevelden/' target='_blank' rel='noreferrer'>
+                <Bounce bottom>
+                  <GithubIcon />
+                </Bounce>
+              </a>
+            </div>
+            <div className='icon email'>
+              <a href='mailto: nickvandevelden@hotmail.com'>
+                <Bounce bottom>
+                  <EmailIcon />
+                </Bounce>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </Styles>
-  );
+      </Styles>
+    );
+  } else {
+    return (
+      <Styles>
+        <div className='contact-content'>
+          <div className='icons'>
+            <div className='icon facebook'>
+              <a
+                href='https://www.facebook.com/nick.vandevelden.3/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <FacebookIcon />
+              </a>
+            </div>
+            <div className='icon instagram'>
+              <a href='https://www.instagram.com/nickvandevelden/' target='_blank' rel='noreferrer'>
+                <InstagramIcon />
+              </a>
+            </div>
+            <div className='icon github'>
+              <a href='https://github.com/nickvandevelden/' target='_blank' rel='noreferrer'>
+                <GithubIcon />
+              </a>
+            </div>
+            <div className='icon email'>
+              <a href='mailto: nickvandevelden@hotmail.com'>
+                <EmailIcon />
+              </a>
+            </div>
+          </div>
+        </div>
+      </Styles>
+    );
+  }
 };
