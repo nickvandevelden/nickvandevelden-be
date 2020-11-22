@@ -8,7 +8,6 @@ import CtgImage from './../assets/images/ctg.png';
 import BelfiusImage from './../assets/images/belfius.png';
 import ArhsImage from './../assets/images/arhs.png';
 import MediahuisImage from './../assets/images/mediahuis.png';
-import Bounce from 'react-reveal/Bounce';
 
 const Styles = styled.div`
   .experience-content {
@@ -64,34 +63,69 @@ const Styles = styled.div`
 `;
 
 export const Experience = (props) => {
-  return (
-    <Styles>
-      <div className='experience-content'>
-        <div className='experience-table'>
-          <div className='experience-row'>
-            <div className='experience-column'>
-              <img src={SamsungImage} alt='samsung' />
+  if (isMobileOnly) {
+    return (
+      <Styles>
+        <div className='experience-content'>
+          <div className='experience-table'>
+            <div className='experience-row'>
+              <div className='experience-column samsung'>
+                <img src={SamsungImage} alt='samsung' />
+              </div>
+              <div className='experience-column crelan'>
+                <img src={CrelanImage} alt='crelan' />
+              </div>
             </div>
-            <div className='experience-column'>
-              <img src={CrelanImage} alt='crelan' />
+            <div className='experience-row'>
+              <div className='experience-column ctg'>
+                <img src={CtgImage} alt='ctg' />
+              </div>
+              <div className='experience-column belfius'>
+                <img src={BelfiusImage} alt='belfius' />
+              </div>
             </div>
-            <div className='experience-column'>
-              <img src={CtgImage} alt='ctg' />
-            </div>
-          </div>
-          <div className='experience-row'>
-            <div className='experience-column'>
-              <img src={BelfiusImage} alt='belfius' />
-            </div>
-            <div className='experience-column'>
-              <img src={ArhsImage} alt='arhs' />
-            </div>
-            <div className='experience-column'>
-              <img src={MediahuisImage} alt='mediahuis' />
+            <div className='experience-row'>
+              <div className='experience-column arhs'>
+                <img src={ArhsImage} alt='arhs' />
+              </div>
+              <div className='experience-column mediahuis'>
+                <img src={MediahuisImage} alt='mediahuis' />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </Styles>
-  );
+      </Styles>
+    );
+  } else {
+    return (
+      <Styles>
+        <div className='experience-content'>
+          <div className='experience-table'>
+            <div className='experience-row'>
+              <div className='experience-column'>
+                <img src={SamsungImage} alt='samsung' />
+              </div>
+              <div className='experience-column'>
+                <img src={CrelanImage} alt='crelan' />
+              </div>
+              <div className='experience-column'>
+                <img src={CtgImage} alt='ctg' />
+              </div>
+            </div>
+            <div className='experience-row'>
+              <div className='experience-column'>
+                <img src={BelfiusImage} alt='belfius' />
+              </div>
+              <div className='experience-column'>
+                <img src={ArhsImage} alt='arhs' />
+              </div>
+              <div className='experience-column'>
+                <img src={MediahuisImage} alt='mediahuis' />
+              </div>
+            </div>
+          </div>
+        </div>
+      </Styles>
+    );
+  }
 };
