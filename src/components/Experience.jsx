@@ -69,37 +69,37 @@ export const Experience = (props) => {
       <Styles>
         <div className='experience-content'>
           <div className='experience-table'>
-            <div class='experience-row'>
-              <div class='experience-column samsung'>
+            <div className='experience-row'>
+              <div className='experience-column samsung'>
                 <Bounce bottom>
                   <img src={SamsungImage} alt='samsung' />
                 </Bounce>
               </div>
-              <div class='experience-column crelan'>
+              <div className='experience-column crelan'>
                 <Bounce bottom>
                   <img src={CrelanImage} alt='crelan' />
                 </Bounce>
               </div>
             </div>
-            <div class='experience-row'>
-              <div class='experience-column ctg'>
+            <div className='experience-row'>
+              <div className='experience-column ctg'>
                 <Bounce bottom>
                   <img src={CtgImage} alt='ctg' />
                 </Bounce>
               </div>
-              <div class='experience-column belfius'>
+              <div className='experience-column belfius'>
                 <Bounce bottom>
                   <img src={BelfiusImage} alt='belfius' />
                 </Bounce>
               </div>
             </div>
-            <div class='experience-row'>
-              <div class='experience-column arhs'>
+            <div className='experience-row'>
+              <div className='experience-column arhs'>
                 <Bounce bottom>
                   <img src={ArhsImage} alt='arhs' />
                 </Bounce>
               </div>
-              <div class='experience-column mediahuis'>
+              <div className='experience-column mediahuis'>
                 <Bounce bottom>
                   <img src={MediahuisImage} alt='mediahuis' />
                 </Bounce>
@@ -114,25 +114,25 @@ export const Experience = (props) => {
       <Styles>
         <div className='experience-content'>
           <div className='experience-table'>
-            <div class='experience-row'>
-              <div class='experience-column'>
+            <div className='experience-row'>
+              <div className='experience-column'>
                 <img src={SamsungImage} alt='samsung' />
               </div>
-              <div class='experience-column'>
+              <div className='experience-column'>
                 <img src={CrelanImage} alt='crelan' />
               </div>
-              <div class='experience-column'>
+              <div className='experience-column'>
                 <img src={CtgImage} alt='ctg' />
               </div>
             </div>
-            <div class='experience-row'>
-              <div class='experience-column'>
+            <div className='experience-row'>
+              <div className='experience-column'>
                 <img src={BelfiusImage} alt='belfius' />
               </div>
-              <div class='experience-column'>
+              <div className='experience-column'>
                 <img src={ArhsImage} alt='arhs' />
               </div>
-              <div class='experience-column'>
+              <div className='experience-column'>
                 <img src={MediahuisImage} alt='mediahuis' />
               </div>
             </div>

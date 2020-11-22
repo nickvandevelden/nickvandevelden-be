@@ -114,9 +114,9 @@ export const About = (props) => {
   return (
     <Styles>
       <div className='about-content'>
-        <h2 class='sentence'>
+        <h2 className='sentence'>
           <div className='description'>Get in touch with me for...</div>
-          <div class='words words-1'>
+          <div className='words words-1'>
             <span>TESTING</span>
             <span>TEST AUTOMATION</span>
             <span>PRODUCT MANAGEMENT</span>
