@@ -32,11 +32,11 @@ const Styles = styled.div`
   }
 
   .experience-row:nth-child(1) {
-    padding-bottom: ${isMobileOnly ? '10%' : '5%'};
+    padding-bottom: ${isMobileOnly ? '15%' : '2.5%'};
   }
 
   .experience-row:nth-child(2) {
-    padding-bottom: ${isMobileOnly ? '10%' : '0%'};
+    padding-bottom: ${isMobileOnly ? '15%' : '0%'};
   }
 
   .experience-row:nth-child(3) {
