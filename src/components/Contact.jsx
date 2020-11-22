@@ -38,14 +38,15 @@ const Styles = styled.div`
   }
 
   a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: ${COLORS.tertiary};
-    transition: 0.3s;
+    transition: 0.5s;
     &:hover {
       color: ${isMobileOnly ? COLORS.tertiary : COLORS.text};
     }
+  }
+
+  .react-reveal {
+    display: flex;
   }
 `;
 
@@ -55,36 +56,32 @@ export const Contact = (props) => {
       <div className='contact-content'>
         <div className='icons'>
           <div className='icon facebook'>
-            <Bounce bottom>
-              <a
-                href='https://www.facebook.com/nick.vandevelden.3/'
-                target='_blank'
-                rel='noreferrer'
-              >
+            <a href='https://www.facebook.com/nick.vandevelden.3/' target='_blank' rel='noreferrer'>
+              <Bounce bottom>
                 <FacebookIcon />
-              </a>
-            </Bounce>
+              </Bounce>
+            </a>
           </div>
           <div className='icon instagram'>
-            <Bounce bottom>
-              <a href='https://www.instagram.com/nickvandevelden/' target='_blank' rel='noreferrer'>
+            <a href='https://www.instagram.com/nickvandevelden/' target='_blank' rel='noreferrer'>
+              <Bounce bottom>
                 <InstagramIcon />
-              </a>
-            </Bounce>
+              </Bounce>
+            </a>
           </div>
           <div className='icon github'>
-            <Bounce bottom>
-              <a href='https://github.com/nickvandevelden/' target='_blank' rel='noreferrer'>
+            <a href='https://github.com/nickvandevelden/' target='_blank' rel='noreferrer'>
+              <Bounce bottom>
                 <GithubIcon />
-              </a>
-            </Bounce>
+              </Bounce>
+            </a>
           </div>
           <div className='icon email'>
-            <Bounce bottom>
-              <a href='mailto: nickvandevelden@hotmail.com'>
+            <a href='mailto: nickvandevelden@hotmail.com'>
+              <Bounce bottom>
                 <EmailIcon />
-              </a>
-            </Bounce>
+              </Bounce>
+            </a>
           </div>
         </div>
       </div>
