@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {
   GrFacebook as FacebookIcon,
-  GrInstagram as InstagramIcon,
+  GrLinkedin as LinkedInIcon,
   GrGithub as GithubIcon,
 } from 'react-icons/gr';
 import { BsEnvelope as EmailIcon } from 'react-icons/bs';
@@ -68,10 +68,14 @@ export const Contact = (props) => {
                 </Bounce>
               </a>
             </div>
-            <div className='icon instagram'>
-              <a href='https://www.instagram.com/nickvandevelden/' target='_blank' rel='noreferrer'>
+            <div className='icon linkedin'>
+              <a
+                href='https://www.linkedin.com/in/nick-van-de-velden-7b881613/'
+                target='_blank'
+                rel='noreferrer'
+              >
                 <Bounce bottom>
-                  <InstagramIcon />
+                  <LinkedInIcon />
                 </Bounce>
               </a>
             </div>
@@ -107,9 +111,13 @@ export const Contact = (props) => {
                 <FacebookIcon />
               </a>
             </div>
-            <div className='icon instagram'>
-              <a href='https://www.instagram.com/nickvandevelden/' target='_blank' rel='noreferrer'>
-                <InstagramIcon />
+            <div className='icon linkedin'>
+              <a
+                href='https://www.linkedin.com/in/nick-van-de-velden-7b881613/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <LinkedInIcon />
               </a>
             </div>
             <div className='icon github'>
