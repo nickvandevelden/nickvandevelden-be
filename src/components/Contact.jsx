@@ -41,7 +41,7 @@ const Styles = styled.div`
     color: ${COLORS.tertiary};
     transition: 0.5s;
     &:hover {
-      color: ${isMobileOnly ? COLORS.tertiary : COLORS.text};
+      color: ${isMobileOnly ? COLORS.tertiary : COLORS.primary};
       font-size: ${isMobileOnly ? '10vw' : '7vw'};
     }
   }
