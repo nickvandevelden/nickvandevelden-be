@@ -5,6 +5,7 @@ import { Home } from './components/Home';
 import { About } from './components/About';
 import { Contact } from './components/Contact';
 import { Experience } from './components/Experience';
+import { Footer } from './components/Footer';
 import { isMobileOnly, withOrientationChange } from 'react-device-detect';
 
 let App = (props) => {
@@ -23,6 +24,7 @@ let App = (props) => {
         <About />
         <Contact />
         <Experience />
+        <Footer />
       </Layout>
     );
   }
