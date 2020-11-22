@@ -32,11 +32,11 @@ const Styles = styled.div`
   }
 
   .experience-row:nth-child(1) {
-    padding-bottom: ${isMobileOnly ? '15%' : '5%'};
+    padding-bottom: ${isMobileOnly ? '10%' : '5%'};
   }
 
   .experience-row:nth-child(2) {
-    padding-bottom: ${isMobileOnly ? '15%' : '0%'};
+    padding-bottom: ${isMobileOnly ? '10%' : '0%'};
   }
 
   .experience-row:nth-child(3) {
@@ -53,7 +53,11 @@ const Styles = styled.div`
   }
 
   img {
-    max-width: ${isMobileOnly ? '65%' : '50%'};
+    width: ${isMobileOnly ? '65%' : '50%'};
+  }
+
+  .mediahuis img {
+    width: 80%;
   }
 `;
 
@@ -64,36 +68,36 @@ export const Experience = (props) => {
         <div className='experience-content'>
           <div className='experience-table'>
             <div class='experience-row'>
-              <div class='experience-column'>
+              <div class='experience-column samsung'>
                 <Bounce bottom>
                   <img src={SamsungImage} alt='samsung' />
                 </Bounce>
               </div>
-              <div class='experience-column'>
+              <div class='experience-column crelan'>
                 <Bounce bottom>
                   <img src={CrelanImage} alt='crelan' />
                 </Bounce>
               </div>
             </div>
             <div class='experience-row'>
-              <div class='experience-column'>
+              <div class='experience-column ctg'>
                 <Bounce bottom>
                   <img src={CtgImage} alt='ctg' />
                 </Bounce>
               </div>
-              <div class='experience-column'>
+              <div class='experience-column belfius'>
                 <Bounce bottom>
                   <img src={BelfiusImage} alt='belfius' />
                 </Bounce>
               </div>
             </div>
             <div class='experience-row'>
-              <div class='experience-column'>
+              <div class='experience-column arhs'>
                 <Bounce bottom>
                   <img src={ArhsImage} alt='arhs' />
                 </Bounce>
               </div>
-              <div class='experience-column'>
+              <div class='experience-column mediahuis'>
                 <Bounce bottom>
                   <img src={MediahuisImage} alt='mediahuis' />
                 </Bounce>
