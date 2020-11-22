@@ -58,7 +58,7 @@ const Styles = styled.div`
   }
 
   .mediahuis img {
-    width: 80%;
+    width: ${isMobileOnly ? '70%' : '80%'};
   }
 `;
 
