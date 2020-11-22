@@ -4,6 +4,7 @@ import { Landscape } from './components/Landscape';
 import { Home } from './components/Home';
 import { About } from './components/About';
 import { Contact } from './components/Contact';
+import { Experience } from './components/Experience';
 import { isMobileOnly, withOrientationChange } from 'react-device-detect';
 
 let App = (props) => {
@@ -21,6 +22,7 @@ let App = (props) => {
         <Home />
         <About />
         <Contact />
+        <Experience />
       </Layout>
     );
   }

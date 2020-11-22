@@ -38,24 +38,67 @@ const Styles = styled.div`
   }
 
   a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: ${COLORS.tertiary};
-    transition: 0.3s;
+    transition: 0.5s;
     &:hover {
       color: ${isMobileOnly ? COLORS.tertiary : COLORS.text};
+      font-size: ${isMobileOnly ? '10vw' : '7vw'};
     }
+  }
+
+  .react-reveal {
+    display: flex;
   }
 `;
 
 export const Contact = (props) => {
-  return (
-    <Styles>
-      <div className='contact-content'>
-        <div className='icons'>
-          <div className='icon facebook'>
-            <Bounce bottom>
+  if (isMobileOnly) {
+    return (
+      <Styles>
+        <div className='contact-content'>
+          <div className='icons'>
+            <div className='icon facebook'>
+              <a
+                href='https://www.facebook.com/nick.vandevelden.3/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <Bounce bottom>
+                  <FacebookIcon />
+                </Bounce>
+              </a>
+            </div>
+            <div className='icon instagram'>
+              <a href='https://www.instagram.com/nickvandevelden/' target='_blank' rel='noreferrer'>
+                <Bounce bottom>
+                  <InstagramIcon />
+                </Bounce>
+              </a>
+            </div>
+            <div className='icon github'>
+              <a href='https://github.com/nickvandevelden/' target='_blank' rel='noreferrer'>
+                <Bounce bottom>
+                  <GithubIcon />
+                </Bounce>
+              </a>
+            </div>
+            <div className='icon email'>
+              <a href='mailto: nickvandevelden@hotmail.com'>
+                <Bounce bottom>
+                  <EmailIcon />
+                </Bounce>
+              </a>
+            </div>
+          </div>
+        </div>
+      </Styles>
+    );
+  } else {
+    return (
+      <Styles>
+        <div className='contact-content'>
+          <div className='icons'>
+            <div className='icon facebook'>
               <a
                 href='https://www.facebook.com/nick.vandevelden.3/'
                 target='_blank'
@@ -63,31 +106,25 @@ export const Contact = (props) => {
               >
                 <FacebookIcon />
               </a>
-            </Bounce>
-          </div>
-          <div className='icon instagram'>
-            <Bounce bottom>
+            </div>
+            <div className='icon instagram'>
               <a href='https://www.instagram.com/nickvandevelden/' target='_blank' rel='noreferrer'>
                 <InstagramIcon />
               </a>
-            </Bounce>
-          </div>
-          <div className='icon github'>
-            <Bounce bottom>
+            </div>
+            <div className='icon github'>
               <a href='https://github.com/nickvandevelden/' target='_blank' rel='noreferrer'>
                 <GithubIcon />
               </a>
-            </Bounce>
-          </div>
-          <div className='icon email'>
-            <Bounce bottom>
+            </div>
+            <div className='icon email'>
               <a href='mailto: nickvandevelden@hotmail.com'>
                 <EmailIcon />
               </a>
-            </Bounce>
+            </div>
           </div>
         </div>
-      </div>
-    </Styles>
-  );
+      </Styles>
+    );
+  }
 };
