@@ -105,7 +105,7 @@ export const Home = (props) => {
           <h1>Nick {'\n'} Van de Velden</h1>
         </div>
         <div className='swipe swipe--delay'>
-          <h3>Senior Test Engineer</h3>
+          <h3>Senior IT Consultant</h3>
         </div>
       </div>
     </Styles>
