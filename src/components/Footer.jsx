@@ -30,7 +30,7 @@ export const Footer = (props) => {
   return (
     <Styles>
       <div className='footer-content'>
-        <div className='copyright'>© 2020 - Nick Van de Velden - All Rights Reserved</div>
+        <div className='copyright'>© 2020 - Nick Van de Velden - All rights reserved</div>
         <div className='made-with'>Made from scratch with ReactJS</div>
       </div>
     </Styles>
