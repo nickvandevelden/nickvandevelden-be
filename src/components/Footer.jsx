@@ -24,6 +24,20 @@ const Styles = styled.div`
   .made-with {
     font-size: ${isMobileOnly ? '2.5vw' : '1vw'};
   }
+
+  @media screen and (min-width: 1080px) {
+    .footer-content {
+      font-size: 19px;
+    }
+
+    .copyright {
+      padding-bottom: none;
+    }
+
+    .made-with {
+      font-size: 13px;
+    }
+  }
 `;
 
 export const Footer = (props) => {

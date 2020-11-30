@@ -49,6 +49,16 @@ const Styles = styled.div`
   .react-reveal {
     display: flex;
   }
+
+  @media screen and (min-width: 1080px) {
+    .icons {
+      font-size: 64px;
+    }
+
+    a:hover {
+      font-size: 90px;
+    }
+  }
 `;
 
 export const Contact = (props) => {
