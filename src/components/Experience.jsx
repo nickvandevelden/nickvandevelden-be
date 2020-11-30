@@ -32,7 +32,7 @@ const Styles = styled.div`
 
   .experience-row:nth-child(1) {
     padding-top: ${isMobileOnly ? '5%' : '0%'};
-    padding-bottom: ${isMobileOnly ? '15%' : '2.5%'};
+    padding-bottom: ${isMobileOnly ? '15%' : '5%'};
   }
 
   .experience-row:nth-child(2) {
@@ -54,11 +54,17 @@ const Styles = styled.div`
   }
 
   img {
-    width: ${isMobileOnly ? '50%' : '35%'};
+    width: ${isMobileOnly ? '50%' : '25%'};
   }
 
   .mediahuis img {
     width: ${isMobileOnly ? '70%' : '80%'};
+  }
+
+  @media screen and (min-width: 1080px) {
+    img {
+      width: 25%;
+    }
   }
 `;
 

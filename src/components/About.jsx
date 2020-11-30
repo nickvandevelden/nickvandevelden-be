@@ -26,6 +26,16 @@ const Styles = styled.div`
     font-weight: 100;
   }
 
+  @media screen and (min-width: 1080px) {
+    .sentence {
+      font-size: 51px;
+    }
+
+    .description {
+      font-size: 32px;
+    }
+  }
+
   .words {
     display: block;
     position: relative;

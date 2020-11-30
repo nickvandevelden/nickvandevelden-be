@@ -69,6 +69,16 @@ const Styles = styled.div`
     }
   }
 
+  @media screen and (min-width: 1080px) {
+    h1 {
+      font-size: 102px;
+    }
+
+    h3 {
+      font-size: 38px;
+    }
+  }
+
   @keyframes fade {
     from {
       opacity: 0;
