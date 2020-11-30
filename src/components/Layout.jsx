@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const Styles = styled.div`
   .container {
     width: 100%;
+    overflow: hidden;
   }
 `;
 
