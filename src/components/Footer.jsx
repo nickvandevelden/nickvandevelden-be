@@ -5,7 +5,7 @@ import { COLORS } from '../constants/Colors';
 
 const Styles = styled.div`
   .footer-content {
-    min-height: ${isMobileOnly ? '6.25vh' : '12.5vh'};
+    min-height: 12.5vh;
     position: relative;
     width: 100vw;
     display: flex;
@@ -15,14 +15,14 @@ const Styles = styled.div`
     text-align: center;
     background-color: ${COLORS.primary};
     color: ${COLORS.tertiary};
-    font-size: ${isMobileOnly ? '3vw' : '1.5vw'};
+    font-size: ${isMobileOnly ? '4vw' : '1.5vw'};
   }
   .copyright {
     padding-bottom: 1%;
   }
 
   .made-with {
-    font-size: ${isMobileOnly ? '2vw' : '1vw'};
+    font-size: ${isMobileOnly ? '2.5vw' : '1vw'};
   }
 `;
 
