@@ -59,6 +59,16 @@ const Styles = styled.div`
       font-size: 90px;
     }
   }
+
+  @media screen and (min-width: 2560px) {
+    .icons {
+      font-size: 90px;
+    }
+
+    a:hover {
+      font-size: 116px;
+    }
+  }
 `;
 
 export const Contact = (props) => {

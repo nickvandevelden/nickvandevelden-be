@@ -54,7 +54,7 @@ const Styles = styled.div`
   }
 
   img {
-    width: ${isMobileOnly ? '50%' : '25%'};
+    width: ${isMobileOnly ? '50%' : '35%'};
   }
 
   .mediahuis img {
@@ -62,6 +62,12 @@ const Styles = styled.div`
   }
 
   @media screen and (min-width: 1080px) {
+    img {
+      width: 35%;
+    }
+  }
+
+  @media screen and (min-width: 2560px) {
     img {
       width: 25%;
     }
