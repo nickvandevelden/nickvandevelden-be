@@ -1,6 +1,7 @@
 import './App.css';
 import { Layout } from './components/Layout';
 import { Landscape } from './components/Landscape';
+import { Description } from './components/Description';
 import { Home } from './components/Home';
 import { About } from './components/About';
 import { Contact } from './components/Contact';
@@ -14,12 +15,14 @@ let App = (props) => {
   if (isMobileOnly && isLandscape)
     return (
       <Layout>
+        <Description />
         <Landscape />
       </Layout>
     );
   else {
     return (
       <Layout>
+        <Description />
         <Home />
         <About />
         <Contact />
